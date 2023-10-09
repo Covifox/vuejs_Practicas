@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="htpps:/unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1 v-bind:style="colorTitulo">DIPLOMADO EN FULLSTACK </h1>
+    <!-- v-bind:style Abreviado -->
+    <!-- <h1 :style="colorTitulo">DIPLOMADO EN FULLSTACK </h1> -->
+    <p v-bind:style="colorParrafo">DESARROLLO FRONTEND CON VUELJS</p>
+    <p><a v-bind:href="url">Guia de Vue</a></p>
+  </div>
+  <script type="module">
+    import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    createApp({
+      data() {
+        return {
+          colorTitulo: "color: green",
+          colorParrafo: "color: blue",
+          url: "https://vuejs.org/guide/introduction.html"
+         }
+      }
+    }).mount('#app')
+  </script>
+      
+</body>
+</html>
