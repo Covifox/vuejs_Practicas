@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bindeo de Variables</title>
+  <script src="https:/unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>Tc.Bs.: <input type="text" v-model="tasaBs"></p>
+    <p>USD.: <input type="text" v-model="monto"></p>
+    
+    <p>{{ monto }} USD. son {{ monto * tasaBs }} Bs.</p>
+  </div>
+  <script type="module">
+    import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    createApp({
+      data(){
+        return{
+          tasaBs: 6.96,
+          monto: 0
+        }
+      }
+    }).mount('#app')
+  </script>  
+</body>
+</html>

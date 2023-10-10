@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if - else</title>
+  <script src="https:/unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>Numero: <input type="number" v-model="numero"></p>  
+    <p>Numero: {{ numero }}</p>
+    <p v-if="numero > 0">El numero es mayor a cero</p>
+    <p v-else-if="numero < 0">El numero es menor a cero</p>
+    <p v-else="numero == 0">El numero es igual a cero</p>
+  </div>
+  <script type="module">
+    import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    createApp({
+      data(){
+        return{
+          numero: 0
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>

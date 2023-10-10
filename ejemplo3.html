@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bindeo de Variables</title>
+  <script src="https:/unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <p>Nombre: <input type="text" v-model="name"></p>
+    <p>Nombre: {{ name}}</p>
+  </div>
+  <script type="module">
+    import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    createApp({
+      data(){
+        return{
+          name: null
+        }
+      }
+    }).mount('#app')
+  </script>  
+</body>
+</html>
