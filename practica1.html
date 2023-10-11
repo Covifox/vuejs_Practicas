@@ -60,7 +60,7 @@
 
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-lg " v-bind:style="'background-color:' + configuracionPagina.menuColor">
+    <nav class="navbar navbar-expand-lg" v-bind:style="'background-color:' + configuracionPagina.menuColor">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">{{ configuracionPagina.marca }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -130,7 +130,7 @@
         </div>
     </div>
 
-    <footer :style="configuracionPagina.footerColor">    
+    <footer v-bind:style="'background-color:' + configuracionPagina.footerColor">    
     </footer>
 </div>
 <script type="module">
